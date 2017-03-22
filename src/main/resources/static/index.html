@@ -38,6 +38,7 @@
                 $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
             }).controller("home", function($http, $location) {
         var self = this;
+
         $http.get('/user').then(successCallback, errorCallback);
 
         function successCallback(data){
